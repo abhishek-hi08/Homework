@@ -1,0 +1,111 @@
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+
+  body {
+      line-height: 1.6;
+      background-color: #f4f4f9;
+  }
+
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 1rem 2rem;
+      position: relative;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #ecf0f1;
+  }
+
+  .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+  }
+
+  .nav-links a {
+      color: #ecf0f1;
+      font-size: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+      background-color: #34495e;
+  }
+
+
+  #menu-toggle {
+      display: none;
+  }
+
+
+  .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      user-select: none;
+  }
+
+  @media (max-width: 768px) {
+
+      .hamburger {
+          display: block;
+      }
+
+      .nav-links {
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: #2c3e50;
+          gap: 0;
+
+
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-in-out;
+      }
+
+      .nav-links li {
+          text-align: center;
+          border-top: 1px solid #34495e;
+      }
+
+      .nav-links a {
+          display: block;
+          padding: 1rem;
+          border-radius: 0;
+      }
+
+      #menu-toggle:checked~.nav-links {
+          max-height: 300px;
+      }
+  }
+
+  .content {
+      padding: 3rem 2rem;
+      text-align: center;
+      color: #333;
+  }
+
+  .hamburger .line {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      margin: 5px 0;
+      transition: all 0.3s ease;
+  }
