@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change-bg</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="my-div">
-    <h1><b>Background Colour <span id="me"> rgb = (0 , 0 , 0)</span> </b></h1>
-    <button id="my-button" onclick="change1()">Don't click</button>
-    <script src="index.js"></script>
-    </div>
+    <h1>GENERATE LIST</h1>
+    <p1>Enter items seperated through commas</p1>
+    <br><br>
+    <input id="hello" type="text" placeholder="Item 1, Item 2, Item 3...">
+    <button id="submitBtn">Generate List</button>
+    <h1>Output:</h1>
+    <ul id="outputList" onclick="processInput()">
+        <li>List items will appear here</li>
+    </ul>
+    <script src="script.js"></script>
 </body>
 </html>
